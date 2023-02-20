@@ -48,6 +48,7 @@ const exampleObj = {
 
 exampleObj.prop1 = "adrian Miftah"
 
+// Interface merupakan sebuah prototype untuk sebuah concrete class. Hampir memliki kesamaan dengan Abstract Class, namun interface tidak memiliki method yang dapat di implementasikan. Berikut adalah contoh pendeklarasian interface
 interface Guitarist  {
     name?: string,
     active?: boolean, // ? untuk menandakan bahwa prop ini optional bisa di isi atau tidak
