@@ -1,4 +1,4 @@
-// Learn  Index Signatures and keyof Assertions
+// Learn Index Signatures and keyof Assertions
 
 // Index Signatures
 
@@ -79,6 +79,16 @@ logStudentKey(student, 'name')
 //     [key: string | number]: number
 // }
 
-type Streams = ' salary' | 'bonus' | 'sidehustle'
+type Streams = 'salary' | 'bonus' | 'sidehustle'
 
-type Incomes = Record<Streams, number>
+type Incomes = Record<Streams, number | string>
+
+const monthlyIncomes: Incomes = {
+    salary: 500,
+    bonus: 100,
+    sidehustle: 250
+}
+
+for(const revenue in monthlyIncomes){
+    console.log(monthlyIncomes[revenue as keyof Incomes]);
+}
